@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic html element aside</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        section{
+            display: flex;
+            align-content: space-between;
+        }
+        .left{
+            height: 100vh;
+            display: block;
+            flex: 1;
+            background-color: rgb(183, 186, 216);
+            padding: 20px;
+            overflow: auto;
+            /* transform: translateX(-100%); */
+            transition: 1s;
+            gap: 40PX;
+        }
+        
+
+        .right{
+            display: block;
+            height: 100vh;
+            flex:4;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .profile img{
+            width: 50px;
+            object-fit: cover;
+            border-radius: 100px;
+        }
+        .profile{
+            
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+            color: #fff;
+        }
+        ul{
+            padding: 0px;
+            margin-top: 15px;
+            color: #fff;
+        }
+        ul li:hover{
+            background-color: #4671e6;
+            color: rgb(230, 231, 236);
+            cursor: pointer;
+            transition: 1s;
+        }
+        ul li{
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            background-color: #6871f032;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        ul li i{
+            color: rgb(103, 121, 255);
+        }
+        .MAIN{
+            display: flex;
+        }
+        .control-panel {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-info select, .user-info button {
+            margin-left: 10px;
+        }
+        
+        .dashboard {
+            padding: 20px;
+        }
+        
+        .dashboard h2 {
+            margin-top: 0;
+        }
+        
+        .quicklinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .quicklink {
+            width: calc(33.33% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        
+        .quicklink a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        
+    </style>
+    <body>
+        <section>
+            <aside class="left" id="sidebar">
+                <h1 class="logo" style="color: #fff; font-size: 1.6rem;" onclick="closeBar()"></h1> <br>
+                <hr>
+                <div class="MAIN">
+        <div class="profile">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUocE3pUbAaAam5m-hPnkA6u93OnQd1WDH9lUhlK60JcAtv5yw9u4Lq0t_KSv5uzmyrrM&usqp=CAU" alt="dummy-profile">
+            <p style="color: rgb(12, 44, 226);">Name:rashmi KR</p>
+            <BR>
+            <HR>
+          
+            <ul type="none">
+                <li><i class="fa-brands fa-slack"></i> Dashboard</li>
+                
+                <li><i class="fa-brands fa-expeditedssl"></i> Product</li>
+               
+                <li><i class="fa-brands fa-flipboard"></i> order</li>
+                
+                <li><i class="fa-solid fa-user"></i>cumstomers</li>
+                
+                <li><i class="fa-solid fa-users"></i>seles Offesers</li>
+                
+                <li><i class="fa-solid fa-location-dot"></i>Location</li>
+                
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+                
+                
+                <li><i class="fa-solid fa-arrow-right"></i> LogOut</li>
+              
+                
+                <li><i class="fa-solid fa-moon"></i> Darkmode <i class="fa-solid fa-toggle-on"></i></li>
+                
+                
+            </ul>
+          </div>
+          <div class="control-panel">
+            <div class="main-content">
+                <div class="header">
+                    <h1>Your Dashboard</h1>
+                    <div class="user-info">
+                        <select>
+                            <option></option>
+                            <option>Super Userss</option>
+                            <option>NEW USER</option>
+                            <option>MANEGER</option>
+                            <option>SUPERIVISOR</option>
+                            <option>Accountant</option>
+                        </select>
+                        <button>Manage</button>
+                        <button>SUBMIT</button>
+                    </div>
+                </div>
+                <div class="dashboard">
+                    <h2>Quicklinks</h2>
+                    
+                    <br>
+                    
+                    <div class="quicklinks">
+                        <div class="quicklink">
+                            <i class="fa-solid fa-bars"><a href="#">Menus</a></i>   
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-solid fa-computer-classic"><a href="#">Articles</a></i> 
+                        </div>
+                        
+                        <div class="quicklink">
+                            <i class="fa-solid fa-pen-fancy"></i> <a href="#">Add New Article</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-solid fa-camera-movie"></i>  <a href="#">Media</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-solid fa-gears"></i>   <a href="#">Extensions/Install</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-solid fa-database"></i><a href="#">Extension/Database</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-brands fa-windows"></i> <a href="#">Modules</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-solid fa-puzzle-piece-simple"></i> <a href="#">Plugins</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-regular fa-pen-to-square"></i>   <a href="#">Templates</a>
+                        </div>
+                        <div class="quicklink">
+                            <i class="fa-sharp fa-solid fa-comments"></i>   <a href="#">Languages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </DIV>
+    </body>
+ <html  
+    
